@@ -1052,10 +1052,7 @@ void Aura::HandleAuraSpecificMods(AuraApplication const * aurApp, Unit * caster,
                                         }
                                         break;
                                 }       
-           case SPELLFAMILY_MAGE:
-                if (!caster)
-                    break;
-            case SPELLFAMILY_PRIEST:
+                case SPELLFAMILY_PRIEST:
                 if (!caster)
                     break;
                 // Devouring Plague
