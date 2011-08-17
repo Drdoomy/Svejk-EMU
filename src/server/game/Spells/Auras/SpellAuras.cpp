@@ -1042,6 +1042,19 @@ void Aura::HandleAuraSpecificMods(AuraApplication const * aurApp, Unit * caster,
                         break;
                 }
                 break;
+                 switch(GetId())
+                                {
+                                case 82925: // Master Marksman
+                                        if (target->GetTypeId() == TYPEID_PLAYER && GetStackAmount() == 5)
+                                       {
+                                                target->CastSpell(target, 82926, true);
+                                                target->RemoveAura(82925);
+                                        }
+                                        break;
+                                }       
+           case SPELLFAMILY_MAGE:
+                if (!caster)
+                    break;
             case SPELLFAMILY_PRIEST:
                 if (!caster)
                     break;
